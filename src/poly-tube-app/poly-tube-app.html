@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
 
 <dom-module id="poly-tube-app">
   <template>
@@ -8,8 +9,21 @@
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
-  </template>
+      <h3>Custom Thumbnail Demo</h3>
+      <google-youtube video-id="yRbOSdAe_JU"
+                      width="853px"
+                      height="480px"
+                      thumbnail="//www.polymer-project.org/images/logos/p-logo.svg">
+      </google-youtube>
 
+      <h3>Playlist Demo</h3>
+      <google-youtube list="PLNYkxOF6rcICc687SxHQRuo9TVNOJelSZ"
+                      list-type="playlist"
+                      width="640px"
+                      height="480px">
+      </google-youtube>
+  </template>
+    
   <script>
     /**
      * @customElement
