@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="poly-tube-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class PolyTubeApp extends Polymer.Element {
+      static get is() { return 'poly-tube-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'poly-tube-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PolyTubeApp.is, PolyTubeApp);
+  </script>
+</dom-module>
